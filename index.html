@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Travel</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="./pi.js"></script>
+    <script src="./cursor.js"></script>
+    <script src="./InfoCard.js"></script>
+</head>
+<body>
+    <a-scene id="main scene">
+        <a-sky id="main-containor" color="#a030ff"></a-sky>
+        <a-entity id="place-container" place cursor-listener info></a-entity>
+        <!-- <a-entity id="side_view" side-view cursor-listener></a-entity> -->
+        <a-camera id="camera" position="0 0 1" wasd-controls="enabled:false">
+            <a-entity id="app-title" position="0 0.7 -1" text="font:exo2bold; align:center; width:3; color:black; value:Read Comics"></a-entity>
+            <a-entity id="app-sub-title" position="0 0.55 -1" text="font:dejavu; align:center; width:1; color:black; value:Read Your Favourite Comics"></a-entity>
+            <a-entity id="camera-cursor" cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: #fff; shader: flat"></a-entity>
+            
+        </a-camera>
+    </a-scene>
+</body>
+</html>
